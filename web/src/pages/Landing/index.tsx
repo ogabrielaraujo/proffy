@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import useFetch from 'hooks/useFetch'
 
 import './styles.css'
 
@@ -11,6 +12,8 @@ import giveClassesIcon from 'assets/images/icons/give-classes.svg'
 import purpleHeartIcon from 'assets/images/icons/purple-heart.svg'
 
 const Landing: React.FC = () => {
+  const { data } = useFetch('/connections/total')
+
   return (
     <div id="page-landing">
       <div id="page-landing-content" className="container">
@@ -37,7 +40,7 @@ const Landing: React.FC = () => {
         </div>
 
         <div className="total-connections">
-          Total de 1000 conexões já realizadas
+          Total de {data && data.total} conexões já realizadas
           <img src={purpleHeartIcon} alt="Coração Roxo" />
         </div>
       </div>
