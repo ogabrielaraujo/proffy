@@ -1,9 +1,9 @@
 import { StyleSheet } from 'react-native'
 
-const styles = StyleSheet.create({
+const style = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#8257E5',
+    backgroundColor: '#8257e5',
     justifyContent: 'center',
     padding: 40,
   },
@@ -26,19 +26,19 @@ const styles = StyleSheet.create({
     fontFamily: 'Poppins_400Regular',
     maxWidth: 240,
   },
-  okButton: {
+  button: {
     marginVertical: 40,
-    backgroundColor: '#04d361',
     height: 58,
+    borderRadius: 8,
     alignItems: 'center',
     justifyContent: 'center',
-    borderRadius: 8,
+    backgroundColor: '#04d361',
   },
-  okButtonText: {
-    color: '#FFF',
-    fontSize: 16,
+  buttonText: {
     fontFamily: 'Archivo_700Bold',
+    color: '#FFF',
+    fontSize: 20,
   },
 })
 
-export default styles
+export default style
